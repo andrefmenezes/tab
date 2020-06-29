@@ -57,8 +57,8 @@ const ativos = await knex('ativo')
      }
 
      async delete(request: Request,response: Response){
-        console.log('[DEBUG] USER ROTA',request)
-        console.log('[DEBUG] USER ROTA',request.params.id_user);
+       // console.log('[DEBUG] USER ROTA',request)
+        //console.log('[DEBUG] USER ROTA',request.params.id_user);
       const del =  await knex('user').where('id_user',request.params.id_user).del()
          
        return response.json(del);

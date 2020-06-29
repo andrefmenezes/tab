@@ -16,7 +16,7 @@ export default	{
   },
     
 	apagar:(user)=>{
-		console.log('USER de', user); 
+		//console.log('USER de', user); 
 		console.log('de', user.id_user);
 		return api.delete('user/:id_user', { data: user })
 	}
