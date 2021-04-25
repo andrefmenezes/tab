@@ -8,7 +8,7 @@ export default	{
   },
     
 	atualizar:(user)=>{
-		return api.put('users/:id_user',user);
+		return api.put('users/'+user.id_user,user);
   },
 
   listar:()=>{
@@ -16,8 +16,7 @@ export default	{
   },
     
 	apagar:(user)=>{
-		//console.log('USER de', user); 
-		console.log('de', user.id_user);
-		return api.delete('user/:id_user', { data: user })
+		//console.log('USER de', user); 		
+		return api.delete('user/'+user.id_user,  user )
 	}
 }
